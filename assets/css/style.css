@@ -37,8 +37,7 @@ body::-webkit-scrollbar {
         font-size: 30px;
     }
     .hero div h1{
-        text-wrap: wrap;
-        font-size: 40px;
+        font-size: 34px;
     }
 }
   @keyframes animate {
@@ -254,7 +253,7 @@ body:has(.nav p a:hover) .nav div{
     width: 100%;
     min-height: 100vh;
     background-color: white;
-    transform: translateY(-40%);
+    transform: translateY(-35%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -271,6 +270,9 @@ body:has(.nav p a:hover) .nav div{
     .section1{
         transform: translateY();
     }
+    .section2{
+        transform: translateY(-12%);
+    }
     .section1 h3{
         top: 10%;
     }
@@ -283,4 +285,80 @@ body:has(.nav p a:hover) .nav div{
     .d{
         display: block;
     }
+  }
+  @media screen and (min-width:768px) {
+    .section2 .main_image{
+        margin-top: 100px;
+    }
+  }
+  .section2_in{
+    width: 100%;
+
+  }
+  .section2_in div h3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section2_in .row{
+    display: flex;
+    text-align: center;
+  }
+  .section2_in .row .col{
+    margin-top: 100px;
+  }
+  @media screen and (min-width:768px) {
+    .section2_in{
+        transform: translateY(-35%);
+    }
+    .section2_in .row .col img{
+        width: 33%;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .section2_in{
+        transform: translateY(-10%);
+    }
+    .section2_in .row .col img{
+        width: 75%;
+    }
+  }
+.section2_in h3{
+    position: absolute;
+    font-size: 50px;
+    top: 0;
+    color: #727272;
+}
+
+
+
+.header h2 {
+    text-align: center;
+  }
+  
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: #478EC7;
+    width: 0%;
+  }
+  
+  .content {
+    padding: 100px 0;
+    margin: 50px auto 0 auto;
+    width: 80%;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
   }

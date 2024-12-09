@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>  
+      </div>
     <div class="hero">
         <div>
             <p class="hi" >HI, I'M</p>
@@ -143,12 +148,24 @@
         <div class="section2" id="section2">
             <h3>Web projects</h3>
             <div class="d0">
-                <img src="/assets/images/webproject.svg" class="img-fluid" alt="">
+                <img src="/assets/images/webproject.svg" class="img-fluid main_image" alt="">
             </div>
            <div class="d">
                 <img src="/assets/images/webp1.svg" class="img-fluid" alt="">
                 <img src="/assets/images/webp2.svg" class="img-fluid" alt="">
             </div>
+        </div>
+        <div class="section2_in mt-5">
+            <div>
+                <h3>UI/UX</h3>
+            </div>
+            <div class="row " style="padding: 0;margin: 0;">
+                <div class="col">
+                    <img src="/assets/images/webp4.svg"  class="img-fluid" alt="">
+                    <img src="/assets/images/webp5.svg"  class="img-fluid" alt="">
+                </div>
+            </div>
+            
         </div>
 
 
@@ -199,6 +216,16 @@
         },
     },
   });
+
+
+  window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
         </script>
 </body>
 </html>
